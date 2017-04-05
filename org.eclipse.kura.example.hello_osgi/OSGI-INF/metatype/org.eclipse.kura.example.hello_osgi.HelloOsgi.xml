@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="org.eclipse.kura.example.hello_osgi.HelloOsgi"
+        name="HelloOsgi"
+        description="This is a sample metatype file for a simple configurable component">
+
+        <AD id="param1.string"
+            name="param1.Name"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="Amarendra"
+            description="String configuration parameter"/>
+
+        <AD id="param2.float"
+            name="param2.Salary"
+            type="Float"
+            cardinality="0"
+            required="false"
+            default="15.5"
+            min="5.0"
+            max="40.0"
+            description="Float configuration parameter"/>
+
+        <AD id="param3.integer"
+            name="param3.Age"
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="34"
+            min="1"
+            description="Integer configuration parameter"/>
+            
+        <AD id="publish.semanticTopic"
+            name="publish.semanticTopic"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="data"
+            description="Topic to publish messages"/>
+            
+         <AD id="publish.qos"  
+            name="publish.qos"
+            type="Integer"
+            cardinality="0" 
+            required="true"
+            default="0" 
+            description="Default QoS to publish the messages with.">
+           <Option label="Fire and forget" value="0"/>
+           <Option label="Al least once" value="1"/>          
+           <Option label="At most once" value="2"/>
+        </AD>
+            
+        <AD id="publish.retain"  
+            name="publish.retain"
+            type="Boolean"
+            cardinality="0" 
+            required="true"
+            default="false" 
+            description="Default retaing flag for the published messages."/>
+            
+        <AD id="publish.rate"  
+            name="publish.rate"
+            type="Integer"
+            cardinality="0" 
+            required="true"
+            default="1"
+            min="1" 
+            description="Default message publishing rate in Minutes (min=1)."/>
+    </OCD>
+
+    <Designate pid="org.eclipse.kura.example.hello_osgi.HelloOsgi">
+        <Object ocdref="org.eclipse.kura.example.hello_osgi.HelloOsgi"/>
+    </Designate>
+</MetaData>
