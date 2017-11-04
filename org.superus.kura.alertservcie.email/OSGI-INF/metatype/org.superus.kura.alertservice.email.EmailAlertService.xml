@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="org.superus.kura.alertservcie.email.EmailAlertService"
+        name="EmailAlertService"
+        description="This is a sample metatype file for a simple configurable component">
+
+        <AD id="LicenseKey"
+            name="LicenseKey"
+            type="String"
+            cardinality="0"
+            required="true"
+            default=""
+            description="Enter License Key here"/>
+            
+        <AD id="licenseValid"  
+            name="licenseValid"
+            type="Boolean"
+            cardinality="0" 
+            required="true"
+            default="false" 
+            description="License Status if valid or not ?"/>  
+              
+        <AD id="EnableAlert"
+            name="EnableAlert"
+            type="Boolean"
+            cardinality="0"
+            required="true"
+            default="true"
+            description="Option to Enable/Disable the Email Alert"/>        
+
+        <AD id="EmailServerType"  
+            name="Email Server Type"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="XChange" 
+            description="Company Exchange Mail Server">
+           <Option label="XChangeServer" value="XChange"/>
+           <Option label="Gmail_TSL" value="GmailTSL"/>
+           <Option label="Gmail_SSL" value="GmailSSL"/>          
+         </AD>
+
+        <AD id="MailServerHostName"
+            name="MailServerHostName"
+            type="String"
+            cardinality="0"
+            required="true"
+            description="The email server Host Name"/>
+        <AD id="MailTo"  
+            name="To mail address"
+            type="String"
+            cardinality="0" 
+            required="true" 
+            description="The mail Id to which  alert mail will be sent.">
+         </AD>
+         <AD id="MailFrom"  
+            name="From mail address user"
+            type="String"
+            cardinality="0" 
+            required="true" 
+            description="The From mail Id from which mail will be sent.">
+         </AD>
+         <AD id="FromMailPassword"  
+            name="From mail address password"
+            type="String"
+            cardinality="0" 
+            required="true" 
+            description="The password of the From mailId from which alert mail will be sent.">
+         </AD>   
+    </OCD>
+
+    <Designate pid="org.superus.kura.alertservcie.email.EmailAlertService">
+        <Object ocdref="org.superus.kura.alertservcie.email.EmailAlertService"/>
+    </Designate>
+</MetaData>

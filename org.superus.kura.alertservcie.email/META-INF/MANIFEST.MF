@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EmailAlertService
+Bundle-SymbolicName: org.superus.kura.alertservcie.email
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: javax.mail;version="1.5.0",
+ javax.mail.internet;version="1.5.0",
+ org.eclipse.kura.configuration;version="1.1.2",
+ org.osgi.service.component;version="1.2.2",
+ org.slf4j;version="1.7.21"
+Service-Component: OSGI-INF/EmailAlertService.xml
